@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FacturaApp.MainPage" Visual="Material" >
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <Label Text="Facturacion" HorizontalTextAlignment="Center" VerticalOptions="CenterAndExpand" TextColor="White" FontSize="36"/>
+        </Frame>
+        <StackLayout Margin="5">
+            <Label Text="Monto factura"/>
+            <Entry x:Name="EMONTOFACTURA" Keyboard="Numeric"/>
+            <Label Text="Días"/>
+            <Entry x:Name="EDIAS"/>
+            <StackLayout Orientation="Horizontal" Spacing="5" Margin="5" HorizontalOptions="FillAndExpand">
+                <Button Text="PROCESAR" Clicked="Decision" HorizontalOptions="FillAndExpand" BackgroundColor="LightGray"/>
+                <Button Text="LIMPIAR" Clicked="Limpiar" HorizontalOptions="FillAndExpand" BackgroundColor="LightGray"/>
+                <Button Text="SALIR" HorizontalOptions="FillAndExpand" BackgroundColor="LightGray" Clicked="Salir"/>
+            </StackLayout>
+            <Label Text="Descuento"/>
+            <Entry x:Name="EDESCUENTO" IsEnabled="False"/>
+            <Label Text="Mora"/>
+            <Entry x:Name="EMORA" IsEnabled="False"/>
+            <Label Text="Neto a pagar"/>
+            <Entry x:Name="ENETOAPAGAR" IsEnabled="False"/>
+            <Label Text="Total a pagar"/>
+            <Entry x:Name="ETOTALAPAGAR" IsEnabled="False"/>
+        </StackLayout>
+
+    </StackLayout>
+
+</ContentPage>
